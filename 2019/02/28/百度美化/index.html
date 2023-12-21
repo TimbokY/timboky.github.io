@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>
+    
+    给你的百度画个妆 |
+    
+    Timbok&#39;s Blog
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="前端 Git React Es6 JavaScript">
+  
+  
+  
+  
+  <meta name="description" content="介绍现在很多网站做的简单便捷，比如掘金（🙈舔狗应有尽有）,但是百度依然是十年前的画风，而且不管你搜索什么都充斥着各种广告，体验极差。今天我们就一起给百度美化一下。😏 Tips: 这其实是个插件推荐博，技术党勿喷。 安装可加载本地CSS的Chrome插件Chrome上此种插件有很多，这里我选择的是Stylish 下载美化规则这个插件的官网有很多大佬写好的美化规则，大家可以自己选择自己喜欢的。 除">
+<meta name="keywords" content="前端 git react JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给你的百度画个妆">
+<meta property="og:url" content="https://timbok.github.io/2019/02/28/百度美化/index.html">
+<meta property="og:site_name" content="Timbok&#39;s Blog">
+<meta property="og:description" content="介绍现在很多网站做的简单便捷，比如掘金（🙈舔狗应有尽有）,但是百度依然是十年前的画风，而且不管你搜索什么都充斥着各种广告，体验极差。今天我们就一起给百度美化一下。😏 Tips: 这其实是个插件推荐博，技术党勿喷。 安装可加载本地CSS的Chrome插件Chrome上此种插件有很多，这里我选择的是Stylish 下载美化规则这个插件的官网有很多大佬写好的美化规则，大家可以自己选择自己喜欢的。 除">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/5F44C2D6FF4884FDE86F44971B3371C0.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduNoBeatuiful.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduBeatuiful.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduNoBeatuiful2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduBeatuiful2.jpg">
+<meta property="og:updated_time" content="2020-04-15T12:16:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给你的百度画个妆">
+<meta name="twitter:description" content="介绍现在很多网站做的简单便捷，比如掘金（🙈舔狗应有尽有）,但是百度依然是十年前的画风，而且不管你搜索什么都充斥着各种广告，体验极差。今天我们就一起给百度美化一下。😏 Tips: 这其实是个插件推荐博，技术党勿喷。 安装可加载本地CSS的Chrome插件Chrome上此种插件有很多，这里我选择的是Stylish 下载美化规则这个插件的官网有很多大佬写好的美化规则，大家可以自己选择自己喜欢的。 除">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/5F44C2D6FF4884FDE86F44971B3371C0.jpg">
+  
+  <link rel="alternate" href="/atom.xml" title="Timbok&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/avatar.jpg">
+  <link rel="apple-touch-icon" href="/css/images/avatar.jpg">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");
+      font-weight: lighter;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");
+      font-weight: 400;
+      font-style: italic;
+    }
+  </style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  
+  <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+  <link rel="stylesheet" href="/css/header-post.css">
+  
+
+  
+
+  
+  <link rel="stylesheet" href="/css/vdonate.css">
+  
+
+  <script>
+    console.log("%cTimbok",
+      " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em"
+    );
+    console.log('%c这里都是很一般的博客，但是希望你我一起进步。','font-size: 15px');
+  </script>
+
+</head></html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+    <link href="https://cdn.bootcss.com/csshake/1.5.3/csshake-little.min.css" rel="stylesheet">
+    <link href="//at.alicdn.com/t/font_943855_whj85qlkoi.css" rel="stylesheet">
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand shake-little" style="
+                 margin-top: 0px;" href="#" data-toggle="modal" data-target="#myModal">
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/avatar.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/message">留言</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/share">分享</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/introduce">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </ul></div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-百度美化" style="width: 75%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      给你的百度画个妆
+    </h1>
+  
+
+      </header>
+    
+    
+      <div class="article-meta">
+        
+	<a href="/2019/02/28/百度美化/" class="article-date">
+	  <time datetime="2019-02-28T12:49:46.000Z" itemprop="datePublished">2019-02-28</time>
+	</a>
+
+        
+    <a class="article-category-link" href="/categories/工具资源/">工具资源</a>
+
+        
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>现在很多网站做的简单便捷，比如掘金（🙈舔狗应有尽有）,但是百度依然是十年前的画风，而且不管你搜索什么都充斥着各种广告，体验极差。今天我们就一起给百度美化一下。😏</p>
+<p>Tips: 这其实是个插件推荐博，技术党勿喷。</p>
+<h1 id="安装可加载本地CSS的Chrome插件"><a href="#安装可加载本地CSS的Chrome插件" class="headerlink" title="安装可加载本地CSS的Chrome插件"></a>安装可加载本地CSS的Chrome插件</h1><p>Chrome上此种插件有很多，这里我选择的是<a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Stylish</a></p>
+<h1 id="下载美化规则"><a href="#下载美化规则" class="headerlink" title="下载美化规则"></a>下载美化规则</h1><p>这个插件的官网有很多大佬写好的美化规则，大家可以自己选择自己喜欢的。</p>
+<p>除了<code>百度</code>，你还可以下载<code>腾讯</code>、<code>新浪</code>、<code>谷歌</code>、<code>优酷</code>等美化规则。</p>
+<h1 id="在此插件上新建一个CSS样式"><a href="#在此插件上新建一个CSS样式" class="headerlink" title="在此插件上新建一个CSS样式"></a>在此插件上新建一个CSS样式</h1><p><img src="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/5F44C2D6FF4884FDE86F44971B3371C0.jpg" alt=""></p>
+<p>如果你不想做伸手党，且你有一点点CSS功底，那么你可以自定义样式。</p>
+<p>你想想你女朋友觉得某网页的一个模块很丑，想让它消失。你站起来对她说：无知又愚蠢的女人，让我来帮你搞定吧。🤔</p>
+<p>然后你从30块的背包里掏出你的mbp，找到模块的类名，dispaly: none,三步搞定。🤔</p>
+<p>最后对女朋友说，你不喜欢的我都让她消失。🤔</p>
+<blockquote>
+<p>可是你没有女朋友。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>是你没有女朋友</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>你没有女朋友。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>没有女朋友。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>在深色框内你就可以编写自己的样式了。</p>
+<p>以下是我编写的百度美化规则，简易的美化了一下百度然后屏蔽了一些广告。喜欢❤可以使用哟。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 去除首页广告 */</span></span><br><span class="line"><span class="selector-class">.s-mancacrd-main</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#s_top_wrap</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.no-qrcode-layer</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 去除搜索结果广告 */</span></span><br><span class="line"><span class="selector-id">#content_left</span> &gt; <span class="selector-class">.result-op</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 美化搜索结果 */</span></span><br><span class="line"><span class="selector-class">.result</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="number">0</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.result</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2px</span> <span class="number">4px</span> -<span class="number">1px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2), <span class="number">0</span> <span class="number">4px</span> <span class="number">5px</span> <span class="number">0</span> <span class="built_in">rgba</span>(0, 0, 0, 0.14),</span><br><span class="line">      <span class="number">0</span> <span class="number">1px</span> <span class="number">10px</span> <span class="number">0</span> <span class="built_in">rgba</span>(0, 0, 0, 0.12);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.result</span> &gt; <span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#u</span> &gt; <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.s_form</span> &#123;</span><br><span class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">height</span>: auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#s_tab</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f8f8f8</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">80px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">127px</span>;</span><br><span class="line">    <span class="attribute">float</span>: none;</span><br><span class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#content_left</span> &#123;</span><br><span class="line">	<span class="attribute">padding-left</span>: <span class="number">127px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.s_ipt_wr</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.s_btn</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">42px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.s_ipt</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">9px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#result_logo</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">9px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ipt_rec</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ipt_rec</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.nums</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">127px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">42px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">42px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#content_right</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cr-title-sub</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#head</span> <span class="selector-class">.bdsug</span> &#123;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">42px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 搜索框 */</span></span><br><span class="line"><span class="selector-class">.bdsug</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bdsug</span> <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果对比：</strong><br><img src="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduNoBeatuiful.jpg" alt="原百度"><br><img src="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduBeatuiful.jpg" alt="美化后"></p>
+<p><img src="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduNoBeatuiful2.jpg" alt="原百度"></p>
+<p><img src="https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/baiduBeatuiful2.jpg" alt="美化后"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了。又水了一篇文章。🚣</p>
+<p>喜欢请点赞。彳亍口巴？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '救救孩子吧，我想喝一点点奶茶！', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: "https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/webchat.jpg",
+  alipayImage: "https://raw.githubusercontent.com/yb909144903/PictureBed/develop/img/alipay.jpg",
+});
+</script>
+      
+      
+      <div>
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+          <strong>本文作者:  </strong>Timbok
+          </li>
+          <li class="post-copyright-link">
+          <strong>本文链接:  </strong>
+          <a href="/2019/02/28/百度美化/" target="_blank" title="给你的百度画个妆">https://timbok.github.io/2019/02/28/百度美化/</a>
+          </li>
+          <li class="post-copyright-license">
+            <strong>版权声明:   </strong>
+            本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            许可协议。转载请注明出处
+          </li>
+         
+        </ul>
+<div>
+</div></div>
+      
+      
+        
+	<!-- Valine start -->
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <div id="vcomments" style="margin-top: 20px;"></div>
+  <script>
+      new Valine({
+          el: '#vcomments',
+          appId: '2OIV4MkEvPw7WNQEXOKh9YNq-gzGzoHsz',
+          appKey: 'rvPKKHDlqLtjJhcIaUg0XETR',
+          avatar: 'monsterid',
+          placeholder: '来啊，快活啊！ㄟ( ▔, ▔ )ㄏ',
+      })
+  </script>
+	<!-- Valine end -->
+
+
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/03/Jay/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          周杰伦的歌
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/23/JavaScript闯关笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">JavaScript闯关笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装可加载本地CSS的Chrome插件"><span class="nav-number">2.</span> <span class="nav-text">安装可加载本地CSS的Chrome插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载美化规则"><span class="nav-number">3.</span> <span class="nav-text">下载美化规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在此插件上新建一个CSS样式"><span class="nav-number">4.</span> <span class="nav-text">在此插件上新建一个CSS样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <!-- <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p> -->
+	      <p id="copyRightEn">Copyright &copy; 2017 - 2023 Timbok&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/message" class="mobile-nav-link">Message</a>
+  
+    <a href="/share" class="mobile-nav-link">Share</a>
+  
+    <a href="/introduce" class="mobile-nav-link">Introduce</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-130181265-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var id = '996ec7f06c07b1e3b09cd843ae120862';
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + id;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Timbok&#39;s Blog
+          </div>
+          <div class="panel-body"> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </div>
+          <div class="panel-body">
+            Copyright © 2023 Timbok All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>
