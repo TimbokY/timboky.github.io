@@ -725,12 +725,16 @@
     animation();
   }
 
+  console.log(window.location.search)
 
   let myLabels = [
-    "🎄程光丽🎄",
     "圣诞快乐 Merry Christmas",
     "🔔🎅🤶🎁🎉🎊⛄🛷🦌🔔"
   ];
+
+  if (window.location.search.includes('cgl')) {
+    myLabels.unshift("🎄程光丽🎄")
+  }
 
   function init() {
     let element = document.getElementById("header");
@@ -766,4 +770,5 @@
   }
 
 </script>
+
 </html>
